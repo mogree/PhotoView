@@ -1,24 +1,17 @@
 apply plugin: 'android'
 
 dependencies {
-    compile 'com.android.support:support-v4:19.0.+'
+    compile 'com.android.support:support-v4:+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:+'
     compile project(':library')
 }
 
 android {
     compileSdkVersion 19
-    buildToolsVersion '19.0.0'
+    buildToolsVersion '19.0.3'
 
     defaultConfig {
-        minSdkVersion 4
+        minSdkVersion 8
         targetSdkVersion 19
-    }
-
-    sourceSets {
-        main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            res.srcDirs = ['res']
-        }
     }
 }
